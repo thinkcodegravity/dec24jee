@@ -1,0 +1,80 @@
+#mainDivision{
+	height:100%;
+	width:100%;
+	background:#E8DAEF ;
+}
+
+.header{
+	height:15%;
+	width:100%;
+}
+.headerColor{
+	background:#5B2C6F;
+}
+
+#body{
+	height:75%;
+	width:100%;
+	background:#BB8FCE;	
+}
+
+#footer{
+	height:10%;
+	width:100%;
+	background:black;	
+	color:yellow;
+	font-size:20px;
+	font-family: verdana;
+	text-align: center;
+
+}
+#filter{
+	height:100%;
+	width:10%;
+	background:#E8DAEF;
+	float:left;
+}
+#productDisplay{
+	height:100%;
+	width:90%;
+	float:left;
+}
+
+#logo{
+	height:80%;
+	width:17%;
+	background-image: url("images/logo.png");
+	background-size: cover;
+	float:left;
+}
+
+#logo:hover{
+	background-image: url("images/1.png");
+	background-size: cover;
+}
+#logo:active{
+	display:none;
+}
+#titleBar{
+	height:100%;
+	width:80%;
+	float:left;
+	background:#F4ECF7;
+
+}
+
+
+#prod{
+	height:20%;
+	width:15%;
+	float:left;
+	background:grey;
+	margin:20px;
+	padding:20px;
+	border-radius:5px;
+}
+#prod:hover{
+	background:black;
+	transform:rotate(-20deg); 
+	transition-duration: 15s;
+}
