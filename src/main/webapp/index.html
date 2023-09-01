@@ -3,94 +3,79 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/test.js"></script>  
 	<div id="fullScreen">
-		<div class="logo">
-			<form action="/login" method="post">
-				userid <Input type="text" name="uid" id="uid" class="classuid" >
-				<br>
-				password<Input type="password"  name="pwd" id="pwd" >
-				<br>
-				<Input type="submit" value="login" id="loginButton" >
+		<div class="header1 header2">
+			<form>
+				<table>		
+					<tr>	
+						<td>Userid</td>
+						<td><input id="uid" type="text"></input></td>
+					</tr>	
+					<tr>	
+						<td>password</td>
+						<td><input id="psw" type="password"></input></td>
+					</tr>	
+					<tr>	
+						<td> </td>
+						<td><input type="submit" value="login" onclick="checkIfEmpty()"></input></td>
+					</tr>	
+				</table>		
+
 			</form>
 		</div>
-		<div id="popularLink" >
-			<Input type="radio" name="vegetables">onion</input>
-			<Input type="radio" name="vegetables">tomato</input>
-			
-			<Input type="checkbox" name="fruits">mango</input>
-			<Input type="checkbox" name="fruits">grapes</input>
-		</div>
-		<div id="products">
+		<div id="body">
 			<div id="filter">
-				<table border="1px">			
+				<input type="radio" value="phone" name="electronics">phone</input><br>
+				<input type="radio" value="tv" name="electronics">tv</input><br>
+				<input type="radio" value="laptop" name="electronics">laptop</input><br>
+			
+				<input type="checkbox" value="google" name="brand">google</input><br>
+				<input type="checkbox" value="apple" name="brand">apple</input><br>
+				<input type="checkbox" value="microsoft" name="brand">microsoft</input><br>
+				
+				<textarea rows=10 cols=5></textarea>
+				<table border=1>			
 					<tr>		
-						<td>john</td>	
-						<td>mike</td>	
+						<td>banana</td>	
+						<td>grapes</td>	
 					</tr>		
-							
-							
 					<tr>		
-						<td>jane</td>	
-						<td>andy</td>	
+						<td>mango</td>	
+						<td>orange</td>	
 					</tr>		
-							
 				</table>			
-
+				<ol>
+					<li>banana</li>
+					<li>mango</li>
+					<li>grapes</li>
+				</ol>
+				<ul>
+					<li>onion</li>
+					<li>tomato</li>
+					<li>potato</li>
+				</ul>
+				
 			</div>
-			<div id="display">
-				<div id="leftDisplay">
-						Reviews
-					<textarea rows="10" cols="50"></textarea>
-					<table>				
-						<tr>			
-							<td>User ID</td>		
-							<td><Input type="text"  name="uid" id="tblUid" ></td>		
-						</tr>		
-									
-						<tr>			
-							<td>Password</td>		
-							<td><Input type="password"  name="pwd" id="tblPwd" ></td>		
-						</tr>		
-						<tr>			
-							<td></td>		
-							<td><Input type="submit" value="login" id="loginbutton" ></td>		
-						</tr>			
-					</table>	
-					<ol>
-						<li>mango</li>
-						<li>grapes</li>
-						<li>banana</li>
-					</ol>
-					
-					<ul>
-						<li>onion</li>
-						<li>tomato</li>
-						<li>potato</li>
-					</ul>
-					
-					<select>
-						<option value="java"> java</option> 
-						<option value="jee"> jee</option> 
-						<option value=".net"> .net</option> 
-						<option value="html"> html</option> 
-					</select>
-					
+			<div id="productDisplay">
+			<select>
+					<option value="java"> java</option> 
+					<option value="html"> html</option> 
+					<option value="css"> css</option> 
+				</select>
+
+				<div id="product">
+					<img src="images/1.png"></img>
 				</div>
-				<div id="rightDisplay">
-					
-					<div id="prd">
-						<img src="product.png">
-					</div>
-					 
-					<div id="prd">
-						<img src="product.png">
-					</div>
-					
-					<div id="prd">
-						<img src="product.png">
-					</div>
-					10% off on all products
+				<div id="product">
+					<img src="images/1.png"></img>
 				</div>
-			</div>	
+				<div id="product">
+					<img src="images/1.png"></img>
+				</div>
+				
+			</div>
+		</div>
+		<div id="footer">
+			Copyright @javatraining 
 		</div>
 	</div>
 </html>

@@ -86,24 +86,8 @@ function test(){
 }
 
 function checkIfEmpty() {
-	//var useridTextbox=document.getElementById("uid").value;
-	var useridTextbox=$("#uid").value;
-	var passwordTextbox=document.getElementById("pwd").value;
-	/* // number validation
-	if(  isNaN(parseInt(useridTextbox)) )
-	{
-		alert("invalid phoneNumber");
-		return false;
-	}	
-	*/
-	/* // email id validation
-	if(useridTextbox.indexOf("@") == -1)
-	{
-		alert("invalid email id");
-		return false;
-	} 
-	*/	
-	//var emailElement=$("#emailTextBox").val();
+	var useridTextbox=document.getElementById("uid").value;
+	var passwordTextbox=document.getElementById("psw").value;
 	if(useridTextbox == "")
 	{
 		document.getElementById("uid").style="background:red";
@@ -111,7 +95,7 @@ function checkIfEmpty() {
 		return false;
 	}	
 	else if(passwordTextbox == ""){
-		document.getElementById("pwd").style="background:red";
+		document.getElementById("psw").style="background:red";
 	//	alert("password is mandatory");
 		return false;
 	}
