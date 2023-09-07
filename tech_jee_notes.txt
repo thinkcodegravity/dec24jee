@@ -240,4 +240,140 @@ control flow :
 	
 	
 	
+	Jquery - 
+	simplifies Javascript coding
+	More ways to access html code -
+		id,class attributes and element name
+	decouple html and javascript code	
+	animation effects in-built
+
+Design or architecutre
+	loosely coupled
+	tightlty coupled
+
+Car
+	loosely coupled system
 	
+	
+$("#sectionSubB").parent()
+	
+<div id="sectionA">
+	<div id="sectionSubA">
+		<input id="user" type="text"></input>
+	</div>
+	<div id="sectionSubB"> hi hello </div>	
+</div>
+
+sectionA 
+	sectionSubA
+		text box user 
+	sectionSubB 
+			hi hello text mesage
+
+
+
+
+$("#sectionSubB").text();
+	// READ texxt : give "hi hello"
+	
+	
+$("#sectionSubB").text("bye bye");
+
+$("#sectionSubA").html();
+	// READ html code inside sectionsubA : <input id="user" type="text"></input>
+	
+// READ/access to customer typed value in the user text box			
+$("#user").val();
+// WRITE in the user text box			
+$("#user").val("this is mandatory");
+
+
+
+
+
+Simple data transfer between client and server
+	Key-value pair
+	userid=john&password=john1!&email=j@g.com
+	userid=john
+	password=john1!
+	email=j@g.com
+	
+Complex data tranfer
+	address=123 asdsa qeqwe asdas 123 asd&email=g.com
+	
+Xml - bulk, complex = meta data = info about data
+	<address>
+		<streetnumber>123</streetnumber>
+		<streetname>asdsa</streetname>
+		<city>qeqwe</city>
+		<state>asdas</state>
+		<zip>123</zip>
+		<country>asd</country>
+	</address>	
+Json - JavaScript Object notation... string version of javascript object
+	
+	json
+	{
+		"streetnumber":123,
+		"streetname":"asdsa",
+		"city":"qeqwe",
+		"state":"asdas",
+		"zip":123,
+		"country":"asd"
+	}
+	
+	javascript object
+	{
+		streetnumber:123,
+		streetname:"asdsa",
+		city:"qeqwe",
+		state:"asdas",
+		zip:123,
+		country:"asd"
+	}
+	
+	Java object
+	{
+		int streetnumber=123;
+		String streetname="asdsa";
+		String city="qeqwe";
+		String state="asdas";
+		int zip=123;
+		String country="asd";
+	}
+	
+	
+	
+{
+	"name":"john",
+	"age":21,
+	"loginActive":true,
+	"height":5.7,
+	"hobbies":[ "playing","reading" ],
+	"address":{
+		"streetName":"asd",
+		"city":"qwe",
+		"zip":123
+	}
+}
+
+traditional data type. numeric, boolean, fraction,alphaNumeric
+Arrays
+complex data
+
+attribute name and value are separated by :
+multiple attribute name and value are separated by ,
+
+Microservice : 
+	dev or implement - Rest webservice using JSON exchange
+
+
+Spring boot project - website
+
+annotation : configuration of the project
+
+1) folder structure 
+2) dependancy - libraries/software to support webite development
+3) packaging your software - create single installer file - build process - maven
+4) Run website - webserver software (tomcat)
+5) test website - test script for tessting website

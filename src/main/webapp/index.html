@@ -4,19 +4,19 @@
 	<script src="js/test.js"></script>  
 	<div id="fullScreen">
 		<div class="header1 header2">
-			<form>
+			<form action="login" method="POST">
 				<table>		
 					<tr>	
 						<td>Userid</td>
-						<td><input id="uid" type="text"></input></td>
+						<td><input  name="uid" id="uid" type="text"></input></td>
 					</tr>	
 					<tr>	
 						<td>password</td>
-						<td><input id="psw" type="password"></input></td>
+						<td><input name="pwd" class="psw cssSetting1 cssSetting2" type="password"></input></td>
 					</tr>	
 					<tr>	
 						<td> </td>
-						<td><input type="submit" value="login" onclick="checkIfEmpty()"></input></td>
+						<td><input id="loginButton" type="submit" value="login" ></input></td>
 					</tr>	
 				</table>		
 

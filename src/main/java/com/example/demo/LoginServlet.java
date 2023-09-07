@@ -15,25 +15,30 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
+	 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-		String uid=req.getParameter("uid");
-		String pwd=req.getParameter("pwd");
-		if(uid.equals("john") && pwd.equals("john123"))
-		{
-			// additional notes being sent to next program
-			req.setAttribute("loginSuccess", true);
-			req.setAttribute("name", "");
-			req.getRequestDispatcher("/success").forward(req, res);
-		}
-		else {
-			res.sendRedirect("https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Fwww.google.com%2F&hl=en&dsh=S1275366503%3A1642101485586650&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp");
-		}
-		
+		compareUseridPassword(req, res);	
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-		doGet(req,res);
+		compareUseridPassword(req, res);
 	}
+	
+	private void compareUseridPassword(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		String userid=req.getParameter("uid");
+		String pass=req.getParameter("pwd");
+		if(userid.equals("john") && pass.equals("john123"))
+		{
+			res.getWriter().write("login success");
+			res.getWriter().close();
+		}
+		else 
+		{
+			res.getWriter().write("login failed");
+			res.getWriter().close();
+		}
+	}
+
 
 }
 /* sending binary response to customer

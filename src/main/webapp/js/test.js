@@ -1,4 +1,4 @@
-
+	
 
 test();
 /* java addition method
@@ -86,16 +86,27 @@ function test(){
 }
 
 function checkIfEmpty() {
-	var useridTextbox=document.getElementById("uid").value;
-	var passwordTextbox=document.getElementById("psw").value;
+	
+	// read customer typed input in userid text box using javascript code
+	//var useridTextbox=document.getElementById("uid").value;
+	// read customer typed input in userid text box using jquery code
+	var useridTextbox=$("#uid").val();
+		
+	//var passwordTextbox=document.getElementById("psw").value;
+	var passwordTextbox=$(".psw").val();
+	
 	if(useridTextbox == "")
 	{
-		document.getElementById("uid").style="background:red";
+		$("#uid").val(" PLEASE TYPE USERID ");
+		$("#uid").css("background","yellow");
+	//	document.getElementById("uid").style="background:red";
 	//	alert("userid is mandatory");
 		return false;
 	}	
 	else if(passwordTextbox == ""){
-		document.getElementById("psw").style="background:red";
+		alert(" PLEASE TYPE PASSWORD");
+		$(".psw").css("background","yellow");
+	//	document.getElementById("psw").style="background:red";
 	//	alert("password is mandatory");
 		return false;
 	}
@@ -164,17 +175,34 @@ function checkUser (){
 	
 }
 
+function mouseIsOnUserid(){
+	$("#uid").css("background","green");
+	console.log("customer has placed mouse on userid text box");
+}
+function mouseIsOffUserid(){
+	$("#uid").css("background","white");
+	console.log("customer has  mouse from userid text box");
+}
+
+function trackUidPwdValue(){
+	var u=$("#uid").val();
+	var p=$(".psw").val();
+	if( u == "" || p=="")
+		$("#loginButton").slideUp(5000);   // 5000 milli sec= 5 sec     
+	else
+		$("#loginButton").slideDown(5000);        
+	
+}
+// monitor, implement the code for 
+// event listeners
 $(document).ready(function() {
-	$("#pwd").click( checkUser );
-	$("input").click( trackInput );
-	$("#loginButton").click(checkIfEmpty);
-	$("#emailTextBoxReg").blur(checkUser);
-	/*
-	$("#passwordTextBox").click(checkIfEmptyJquery);
-	$("#logo").mouseenter(changeLogo);
-	$("#logo").mouseleave(function() {
-		document.getElementById("logo").style = "background:grey";
-	}
-	);
-	*/
+
+//	HTML webpage section / customer interaction(events) / javascript takes action
+	$("#loginButton").        click				  (checkIfEmpty);
+//	$("#uid").mouseenter(mouseIsOnUserid);
+//	$("#uid").mouseenter(mouseIsOnUserid);
+	// blur is opposite of focus/active
+//	$("#uid").blur(trackUidPwdValue);
+//	$(".psw").blur(trackUidPwdValue);
 });
+
