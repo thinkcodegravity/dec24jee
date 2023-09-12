@@ -24,18 +24,26 @@ public class LoginServlet extends HttpServlet {
 		compareUseridPassword(req, res);
 	}
 	
-	private void compareUseridPassword(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	private void compareUseridPassword(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		String userid=req.getParameter("uid");
 		String pass=req.getParameter("pwd");
 		if(userid.equals("john") && pass.equals("john123"))
 		{
+			/* text response
 			res.getWriter().write("login success");
 			res.getWriter().close();
+			*/
+			req.getRequestDispatcher("welcome.jsp").forward(req, res);
 		}
 		else 
 		{
-			res.getWriter().write("login failed");
+			/* binary reponse
+			String message="login failed";
+			byte[] binaryResponse=message.getBytes();
+			res.getOutputStream().write(binaryResponse);
 			res.getWriter().close();
+			*/
+			res.sendRedirect("https://accounts.google.com/signup/v2/createaccount?biz=false&cc=US&continue=https%3A%2F%2Fwww.google.com%2F&dsh=S1795304646%3A1694529628495602&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en&ifkv=AYZoVhe61-bWtOOukwMuGgJAjbpl6cr5zOqFryUj7XKtloO8gwKCtsF5qQJI7zexanY6HtEQKqXQtg&theme=glif");
 		}
 	}
 

@@ -377,3 +377,50 @@ annotation : configuration of the project
 3) packaging your software - create single installer file - build process - maven
 4) Run website - webserver software (tomcat)
 5) test website - test script for tessting website
+
+
+
+
+1) who created reference ?   Tomcat (Web server )
+Create reference java program
+LoginServlet ls=new LoginServlet();
+
+2) who is calling method ? service
+ls.doPost()????
+
+
+webserver : enables your website.. launches program internet... 
+	tomcat : free , opensource
+	jboss
+	glassfish
+	weblogic
+	websphere
+	iis
+	
+	
+Servlet
+	init :  initial setup for the servlet program
+	service : routes request to either doGet or doPost
+	doget : logic / algorithm for the service
+	dopost : logic / algorithm for the service
+	destroy : cleanup during shutdown
+	
+	
+	
+Request
+		uid=john&pwd=john123
+		json
+		imaes
+		video
+Response
+	text		= login success
+	binary	= images,video,audio,file
+	webpage	= 
+		redirect
+		forward
+	
+	
+	
+	
+	
+	
