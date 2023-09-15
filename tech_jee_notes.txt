@@ -423,4 +423,127 @@ Response
 	
 	
 	
+http://www.google.com/login?uid=john&pwd=john1!
+
+http://www.google.com - which machine
+/login - which program on google machine
+?uid=john&pwd=john1! - what info u want to share with java program 
+
+
+queryString
+
+
+Text
+images
+video
+audio
+file
+xml
+json
+
+
+block Russian country from my website
+
+123.11.45.11
+
+123.11 = US
+213.3= Canada
+55.6= russia
+
+if( req.getRemoteAddr().startsWith("55.") == true )
+	return "Blocked website in your country"
+
+
+
+MVC Architecture/framework : 
+	proven solutions to a known problem
+Decoupled architecture
+loosely connected
+
+Tightly coupled
+
+M-Model		Business logic
+V-View 		HTML/ASP/JSP/PHP
+C-Controller 	Servlet
+
+html,java
+
+Monolithic Architecture - 
+	Giant project has everything
+Microservices Architecture
+
+http://localhost/additionService/10/20
+path input
+
+http://localhost/areaOfRectangle?breadth=20&length=50
+query param input
+
+Webservice with Complex data exchange
+	Rest using Json
 	
+Complex Input
+	principal
+	time
+	rateOfInterest
+	
+
+{
+	"principal":100000,
+	"time":12,
+	"rate":5
+}
+
+JSON Mapper java program
+public class SimpleInteresetInput{
+	int principal;
+	int time;
+	int rate;
+	// get set methods1
+}
+
+
+Complex Output
+
+PostMan
+
+	
+produce = output 
+consume = input
+
+Swagger :
+	Documentation and Testing of Rest webservice
+	
+/12/124
+?num1=12&num2=124
+complex json input
+complex json output
+
+swagger
+
+WSDL : Webservice Description Language
+xml
+
+Soap webservice implementation
+	top-down approach
+	1) create wsdl file manually
+	2) generate java program from wsdl file
+	3) write code in the java program
+	
+	bottom-up approach
+	1) write java program with logic
+	2) add annotation @webservice
+	3) auto generate wsdl file
+
+Document
+	can be validated ( includes schema in wsdl file)
+	slower
+	complex data type
+RPC
+	cannot be validated
+	faster (light weight)
+	simple data type
+
+
+WSDL : describe websrevice in platform neutral language
+Soap implemented : bottom up approach using annotation
+				Axis CXF framework
