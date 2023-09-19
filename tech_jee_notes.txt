@@ -547,3 +547,289 @@ RPC
 WSDL : describe websrevice in platform neutral language
 Soap implemented : bottom up approach using annotation
 				Axis CXF framework
+
+
+webservice location
+	http://localhost/additionService
+input
+	Get : in the url
+		http://localhost/login/john/john1!
+	Post : in the body
+		http://localhost/login
+		/john/john1!
+output
+	boolean
+
+Browser : Rest webservice Client software (GET) 
+Postman : Rest webservice Client software (POST) 
+Soap UI : Soap webservice Client software 
+RestTemplate : Rest webservice Client java program
+
+RestTemplate rt=new RestTemplate();
+rt.getForObject(  "URL+INPUT" , OUTPUT.class ) ;
+boolean result=rt.getForObject( "http://localhost/login/john/john1!" , Boolean.class);
+
+RestTemplate rt=new RestTemplate();
+rt.postForObject(  "URL", INPUT_Object , OUTPUT.class ) ;
+
+Soap webservice client
+edit POM.xml file with wsdl url : generate the stub program
+use stub program to call webservice methods
+
+
+
+
+
+development : program website
+production support : support (customer issue) website
+
+Customer care :
+	name	john
+	phone	123123
+	account id	11111
+	problem 	i cannot login
+	time		9/18 , 9:30 am
+	
+	john : 9:30 am
+	jane : 9:50 am
+	
+	contact Developer
+		logs : messages printed on the server.
+	
+	print message/logs with sysout
+		issue is in code : which program is printing the message ???
+		what time issue happened : time stamp printed with message ???
+		message are not permanent ????
+		Cannot control when to print and when not to ???
+		
+		
+		
+	Apache log4j
+		log4j.properties : configure where and how to print messages
+		
+	Debugging : detailed messages
+production support : error messages
+
+printing messages : performance issue
+	lot of printing - cpu and memory
+	
+Environments : 
+	Production : millions of users
+		log4j - ERROR
+	staging : test users for website 10 testers, client
+		log4j - INFO
+	testing : test users for website 3-4 testers
+		log4j - INFO
+	development : programming and you test website
+		log4j - DEBUG
+	
+	debug : detailed message printing
+	Info : 
+	error : printed only when exception occurs in application
+	
+	Debug > Info > Warning > Error
+	
+		Oop : 2 relationship
+			inheritance : IS-A relationship
+			composition : HAS-A relationship
+			
+	Iphone > Iphone3 > IphoneX
+	Car > Nissan > Nissanz60		
+			Nissan IS-A Car
+			IphoneX IS-A Iphone
+Food
+Car
+Vehicle
+Pizza
+Veggie Pizza
+Ferrrari
+Rock
+cheese
+
+Food-Pizza
+	Pizza IS-A Food
+Car-Vehicle
+	Car IS-A Vehicle
+Cheese-Pizza
+	Pizza HAS-A Cheese
+***************************************
+Spring framework
+	Dependancy Injection / Inversion of Control (DI / IOC)
+
+	Aspect Oriented Programming (AOP)
+
+
+Dependancy Injection 
+	Dependancy : 2 programs connected by HAS-A relationship
+		Car : depended on Engine, Wheel, AC
+			Car HAS-A Engine
+			
+	Apple iphone : outsource
+		MicroChip : Intel / Nvidia / AMD
+		camera : nikkon/sony/samsung
+		wireless software : att
+		Apple apps
+		
+	Iphone 
+		Has-A Camera (DEPENDANCY)
+		camera is create/manufactured/INJECTED by nikkon into iphone
+		
+	public class Iphone{
+		Camera highDef=new Camera(ssadd,wqeqwe123,4534543 ); // DONT CREATE
+		
+		@Autowired
+		Camera highDef; // DEPENDANCY INJECTION
+		// Dependancy - Iphone is depended on camera
+		// Injection - Spring framework will create/initialize/inject object
+		// creating camera object is outsourced spring framework
+	}
+	
+	
+	interface ICar{
+		public void drive();
+	}
+	// cannot create object of incomplete program
+	ICar ic=new ICar();
+	
+	
+public void add2Cart( int amount){
+	// production support code
+	log.info("customer trying to withdraw 100$");
+	// security code
+	if(userid!=john && userid==andy && userid==mike)
+		return;
+	
+	// give reward points
+	
+	// performance code
+	long startTime=System.currentTimeInMillisec()	//start timer - 9:28:15
+	// exception handling code
+	try{
+		//add2cart
+	}
+	catch(Exception e){
+		sysout("sorry, please try again later");
+	}	
+	long stopTime=System.currentTimeInMillisec()//stop timer - 9:28:15
+}
+public void checkout( int amount){
+	// production support code
+	log.info("customer trying to deposit 100$");
+	// security code
+	if(userid!=john && userid==andy && userid==mike)
+		return;
+	
+	// give reward points
+	
+	// performance code
+	long startTime=System.currentTimeInMillisec()	//start timer - 9:28:15
+	// exception handling code
+	try{
+		// checkout code
+		}
+	catch(Exception e){
+		sysout("sorry, please try again later");
+	}	
+	long stopTime=System.currentTimeInMillisec()//stop timer - 9:28:15
+}
+
+public void login( int amount){
+	// production support code
+	log.info("customer trying to withdraw 100$");
+	// security code
+	if(userid!=john && userid==andy  )
+		return;
+	 
+	// performance code
+	long startTime=System.currentTimeInMillisec()	//start timer - 9:28:15
+	// exception handling code
+	try{
+		// check userid and password
+	}
+	catch(Exception e){
+		sysout("sorry, please try again later");
+	}	
+	long stopTime=System.currentTimeInMillisec()//stop timer - 9:28:15
+}
+
+
+public void changepassowr( int amount){
+	// production support code
+	log.info("customer trying to withdraw 100$");
+	// security code
+	if(userid!=john && userid==andy)
+		return;
+	// give reward points
+	// performance code
+	long startTime=System.currentTimeInMillisec()	//start timer - 9:28:15
+	// exception handling code
+	try{
+		// change password
+	}
+	catch(Exception e){
+		sysout("sorry, please try again later");
+	}	
+	long stopTime=System.currentTimeInMillisec()//stop timer - 9:28:15
+}
+
+
+public void commonCode(){
+	// production support code
+	log.info("customer trying to withdraw 100$");
+	// security code
+	if(userid!=john && userid==andy && userid==mike)
+		return;
+	// give rewards point
+	// performance code
+	long startTime=System.currentTimeInMillisec()	//start timer - 9:28:15
+	// exception handling code
+	try{
+	}
+	}
+	catch(Exception e){
+		sysout("sorry, please try again later");
+	}	
+	long stopTime=System.currentTimeInMillisec()//stop timer - 9:28:15
+}
+public void add2Cart( int amount){
+		//add2cart code
+}
+public void checkout( int amount){
+		// checkout code
+}
+public void login( int amount){
+		// check userid and password
+}
+public void changepassowr( int amount){
+		// change password code
+}	
+
+
+public void withdraw( int amount){
+	// production support code
+	log.info("customer trying to withdraw 100$");
+	// security code
+	if(userid!=john)
+		return;
+	// performance code
+	long startTime=System.currentTimeInMillisec()	//start timer - 9:28:15
+	// exception handling code
+	try{
+		balance=balance-amount;
+	}
+	catch(Exception e){
+		sysout("sorry, please try again later");
+	}	
+	long stopTime=System.currentTimeInMillisec()//stop timer - 9:28:15
+}
+
+every line except line#11 : Cross cutting concerns. NOT directly contibuting to core business logic/ purpose of this method
+
+Aspect oriented programming :
+	allows to separate Core business logic with cross cutting concern
+	
+	Benefits : flexibility
+		modifying exisitng code
+		adding new feature code
+	
+	
