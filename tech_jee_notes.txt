@@ -832,4 +832,37 @@ Aspect oriented programming :
 		modifying exisitng code
 		adding new feature code
 	
+	Spring Model View Controller
+
+1) pom.xml
+	add spring dependancy
+2) xxxxApplication.java
+	configure path to spring program
+	write package names of where spring model and controller program
+	are stored
+3) Application.properties
+	Spring view : webpage loction and extension
+		prefix : location of webpages under webapp folder
+		suffix : extension of webpage programs
+	Spring data : Datasource : database url and credentials
+4) write program 
+
+
+Spring boot 		: website project setup
+Spring framework 	: website development (write  programs)
+
+Nissan altima
+Nissan Z60
+
+Servlet 
+	cut trees
+	shape wood
+	make holes
+	buy nail and nuts
+	put them together
+	
+Spring : Upgrade to servlet controller architecture
+	Package : Readily available wood, holes, nail and nuts
+	put them together
+	
 	
