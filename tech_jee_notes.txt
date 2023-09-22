@@ -865,4 +865,106 @@ Spring : Upgrade to servlet controller architecture
 	Package : Readily available wood, holes, nail and nuts
 	put them together
 	
+Spring beans : 
+	Configuration
+	Component
+		Controller
+			RestController
+		Service
+		Repository
+		
+	Dependancy Injection : DI can be done only if the program being injected has one of the above annotation	
 	
+	public class programA	
+	{
+		@Autowired
+		programB pb; // CANNOT BE INJECTED, SINCE PROGRAMB IS NOT SPRING BEAN CLASS
+		
+		@Autowired
+		programC pc;
+
+	}	
+	public class programB{
+	
+	}
+	
+	@Component
+	public class programC{
+	
+	}
+	
+	
+	Bean Scope : visibility and life time of the spring object 
+		Prototype : new object created every time
+		Singleton
+		Request
+		Session
+		
+		
+		
+	Aspect : separate non business logic code from business logic code
+	
+	
+	public class calculator{
+	
+		public int add(int a, int b){
+			sysout(welcome to our calculator);			// NON BUSINESS LOGIC CODE
+			sysout(customer trying to add 10 and 5);		// NON BUSINESS LOGIC CODE
+			int sum=a+b;							// BUSINESS LOGIC CODE
+			sysout(result is 15);						// NON BUSINESS LOGIC CODE
+			sysout(thank you for using our calculator);		// NON BUSINESS LOGIC CODE
+		}
+		
+	}
+	
+	
+	
+	package com.amazon.shopping;
+	public class Cart
+		public void add2Cart
+		public void removeFromCart
+		public void deleteCart
+		
+package com.amazon.checkout;
+	public class Order
+		public void processOrder
+		public void orderCancel
+			
+package com.amazon.checkout;	
+	public class Payment
+		public void transfer money
+			
+		
+within(com.amazon.checkout.Order) =  processOrder, orderCancel
+within(com.amazon.checkout.*) =  processOrder, orderCancel, transferMoney		
+within(com.amazon.*) 	= processOrder, orderCancel, transferMoney,add2Cart,removecart,deletecart4
+		
+		
+		LoginBusiness
+			int login(String s)
+			void register(int i)
+		OrderService
+			float placeOrder(int i)
+			int cancelOrder(String s)
+			int editOder(int i)
+		PaymentService
+			void pay(int i)
+		
+		
+		execution( * com.amazon.LoginBusiness.*(int) ) 
+			||
+		bean( *Service) 
+			||
+		within( com.amazon.PaymentService ) 
+		
+		
+		register, editOrder, placeOrder 
+		execution = method level control including input and output specifics
+		within = class level
+		bean = name wise match for classes
+		
+		
+		
+		
+		
+		
