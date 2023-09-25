@@ -964,7 +964,21 @@ within(com.amazon.*) 	= processOrder, orderCancel, transferMoney,add2Cart,remove
 		bean = name wise match for classes
 		
 		
-		
-		
-		
-		
+	upper case
+	lower case	
+	camel case
+	
+	CreditCardPayment	
+	findBy
+	
+	
+@Query("SELECT count(*) from users where state=?1 and city=?2",nativequery=true)
+public int countCustomers(String a, String b);
+
+dynamic binding : 
+countCustomer("CA","San Jose");
+	SELECT count(*) from users where state=?1 and city=?2
+	SELECT count(*) from users where state='CA' and city='San Jose'
+
+static query
+SELECT count(*) from users where state='NY' and city='NY'
