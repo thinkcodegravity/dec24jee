@@ -1,7 +1,63 @@
-	 
+substract(10,5);
+var y=20;
 
-test();
-/* java addition method
+function checkIfUseridAvaialable(){
+	console.log("control is now in javascript");
+	var uid=document.getElementById("uid").value;
+	if(uid == "john" || uid=="jane")
+		alert("userid is already taken");	
+	
+}
+
+function mandatoryChecks(){
+	var uid=document.getElementById("uid").value;
+	var pwd=document.getElementById("pwd").value;
+	if(uid=="" || pwd=="")
+	{
+		alert("userid and password are mandatory");
+		return false;
+	}
+	return true;
+}
+function substract(a,b){
+	console.log(" i am inside substract method :"+a +" , "+b);
+	var sub=a-b; // arithmetic operator
+	console.log("returning :"+sub)
+	var x=10;
+	console.log(x);
+	
+	var p= 10 > 5; // relational operator
+	console.log( p);
+	
+	console.log ( 20==10 ); // equality operator
+	
+	// conditional operatora
+	console.log( ( (10==20) || (5 < 8))  );
+	
+	var s=10;
+	var t=20;
+	
+	if( s== t )
+		console.log("s and t are same");
+	else
+		console.log("s and t are different");
+	
+	for(var i=0; i<5 ; i++){
+		console.log("hi");
+	}
+	
+	try{
+			
+	}catch(err){
+		
+	}finally{
+		
+	}
+	
+	return sub;
+}	 
+
+ /* java addition method
 public int add(int a, int b){
 	int sum=a+b;
 	return sum;
@@ -12,78 +68,6 @@ int result=add(10,20);
 
 */
 // javascript addition method
-function add( a, b   ){
-	var sum=a+b;
-	return sum;
-}
-
-function test(){
-	console.log(" i am printing on client sidde console");
-	console.log("testing");
-	var result=add(10,20);
-	console.log("10 +20 :"+result);
-	
-	var a = 10;
-	a="john";
-	var cc='a';
-	var b = false;
-	var c = 10.0;
-	var d = ["john", "jane","mike"];
-	console.log( d[1] );
-	var e = "hello";
-	// javascript object(complex data type)
-	var address = {
-		city: "newyork", state: "ny", zip: 123, country:"usa"
-	};
-	/*
-		public class Address{
-			String city="newyork";
-			String state="ny";
-			int zip=123;
-		}
-	*/
-	var student = {
-		name: "john",
-		age: 10,
-		address: {
-			city: "ny",
-			zip: 123
-		}
-	};
-	
-	console.log("students zip:"+student.address.zip);
-	
-	try {
-		console.log("in exception handling");
-		var i = 0;
-		console.log(abcd);
-		console.log("1");
-	} 
-	catch (error){
-		console.log("2");
-	} 
-	finally {
-		console.log("3");
-	}
-	
-	for (var j = 0; j < 5; j++) {
-		console.log("hi:" + j);
-	}
-
-	var i = 0;
-	if (i == 0) {
-		console.log("i is zero");
-	} else {
-		console.log("i is non zero");
-	}
-
-	while (i < 2) {
-		console.log("hello:" + i);
-		i++;
-	}
-	 
-
-}
 
 function checkIfEmpty() {
 	

@@ -1,81 +1,71 @@
 <html>
-	<link href="css/test.css" rel="stylesheet" type="text/css"></link>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="test.css" rel="stylesheet" type="text/css"></link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/test.js"></script>  
-	<div id="fullScreen">
-		<div class="header1 header2">
-			<form action="login"  >
-				<table>		
-					<tr>	
+<body>	
+	<div id="fullscreen">
+		
+		<div class="header">
+			<form>
+				<table style="color:white">
+					<tr>
 						<td>Userid</td>
-						<td><input  name="uid" id="uid" type="text"></input></td>
-					</tr>	
-					<tr>	
-						<td>password</td>
-						<td><input name="pwd" class="psw cssSetting1 cssSetting2" type="password"></input></td>
-					</tr>	
-					<tr>	
-						<td> </td>
-						<td><input id="loginButton" type="submit" value="login" ></input></td>
-					</tr>	
-				</table>		
-
+						<td><input id="uid" onblur="checkIfUseridAvaialable()" name="uid" type="text"></input></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input id="pwd" name="pwd" type="password"></input></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input onclick="return mandatoryChecks()" type="submit" value="register"></input></td>
+					</tr>					
+				</table>
+				
 			</form>
+			hi i am here outside form
 		</div>
 		<div id="body">
 			<div id="filter">
-				<input type="radio" value="phone" name="electronics">phone</input><br>
-				<input type="radio" value="tv" name="electronics">tv</input><br>
-				<input type="radio" value="laptop" name="electronics">laptop</input><br>
-			
-				<input type="checkbox" value="google" name="brand">google</input><br>
-				<input type="checkbox" value="apple" name="brand">apple</input><br>
-				<input type="checkbox" value="microsoft" name="brand">microsoft</input><br>
+				<textarea rows="5" cols="10"></textarea>
+				<table>
+					<tr> 
+						<td>apple</td>
+						<td>banana</td>
+					</tr>
+					<tr> 
+						<td>onion</td>
+						<td>tomato</td>
+					</tr>
+				</table>
+				<ol><li>tomoato</li><li>potato</li></ol>
+				<ul><li>mango</li><li>grapes</li></ul>
+				<select><option>java</option><option>. net</option><option>php</option></select>
 				
-				<textarea rows=10 cols=5></textarea>
-				<table border=1>			
-					<tr>		
-						<td>banana</td>	
-						<td>grapes</td>	
-					</tr>		
-					<tr>		
-						<td>mango</td>	
-						<td>orange</td>	
-					</tr>		
-				</table>			
-				<ol>
-					<li>banana</li>
-					<li>mango</li>
-					<li>grapes</li>
-				</ol>
-				<ul>
-					<li>onion</li>
-					<li>tomato</li>
-					<li>potato</li>
-				</ul>
+ 				
+				<audio controls>
+						<source src="song.mp3 type=audio/mpeg">
 				
-			</div>
-			<div id="productDisplay">
-			<select>
-					<option value="java"> java</option> 
-					<option value="html"> html</option> 
-					<option value="css"> css</option> 
-				</select>
+				<video width="400" controls>
+					<source src="mov_bbb.ogg" type="video/ogg">.</video>
 
-				<div id="product">
-					<img src="images/1.png"></img>
+			</div>
+			<div id="productdisplay">
+				<div id="Products">
+					<img src="jsp/images/1.png"></img>
 				</div>
-				<div id="product">
-					<img src="images/1.png"></img>
+				<div id="Products">
+					<img src="jsp/images/1.png"></img>
 				</div>
-				<div id="product">
-					<img src="images/1.png"></img>
+				<div id="Products">
+					<img src="jsp/images/1.png"></img>
 				</div>
+				
 				
 			</div>
 		</div>
-		<div id="footer">
-			Copyright @javatraining 
-		</div>
+		<div id="footer"></div>
+		
 	</div>
+</body>	
 </html>
